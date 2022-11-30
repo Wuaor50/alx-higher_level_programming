@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdlib.h>
 /**
   * check_cycle -  checks if a singly linked list has a cycle in it
   * @list: pointer to head
@@ -11,7 +12,7 @@ int check_cycle(listint_t *list)
 
 	if (!list)
 	{
-		return 0;
+		return (0);
 	}
 	temp = list->next;
 	newest = list->next->next;
