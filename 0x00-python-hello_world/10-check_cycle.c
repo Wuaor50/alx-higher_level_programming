@@ -15,7 +15,7 @@ int check_cycle(listint_t *list)
 	}
 	temp = list->next;
 	newest = list->next->next;
-	while (temp && (temp->next))
+	while (temp && newest && newest->next)
 	{
 		if (temp == newest)
 			return (1);
