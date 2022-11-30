@@ -20,7 +20,7 @@ int check_cycle(listint_t *list)
 		if (temp == newest)
 			return (1);
 		temp = temp->next;
-		newest = temp->next->next
+		newest = newest->next->next
 	}
 	return (0);
 }
