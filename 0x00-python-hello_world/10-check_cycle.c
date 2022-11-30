@@ -7,14 +7,20 @@
   */
 int check_cycle(listint_t *list)
 {
-	listint_t *temp;
+	listint_t *temp, *newest;
 
-	temp = list->next;
-	while (temp)
+	if (!list)
 	{
-		if (temp == list)
+		return 0;
+	}
+	temp = list->next;
+	newest = temp->next->next;
+	while (temp && (temp->next))
+	{
+		if (temp == newest)
 			return (1);
-		temp = temp->next
+		temp = temp->next;
+		newest = temp->next->next
 	}
 	return (0);
 }
