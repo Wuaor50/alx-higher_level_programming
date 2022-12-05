@@ -2,8 +2,8 @@
 def replace_in_list(my_list, idx, element):
     n = len(my_list) - 1
     if idx < 0:
-        return None
+        return my_list
     elif idx > n:
-        return None
+        return my_list
     my_list[idx] = element
     return my_list
